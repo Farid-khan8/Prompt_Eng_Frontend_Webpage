@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Main Website</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/4.1.13/lib.min.js"
+            integrity="sha512-LBqpfYKfymp3VEoHOQharES5j6UyXzUP0Td5jk5j1Ekm9tsbAoGUi5VaGA+0gdAlqKvAUb+7iFBe6qQQ7Jwk0Q=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script> -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="bg-gray-50">
+        <!-- Include Navbar -->
+        <%- include ('navbar') %>
+
+        <!-- Include Section 1 -->
+        <%- include ('section1') %>
+
+        <!-- Include Section 2 -->
+        <%- include ('section2') %>
+
+        <!-- Include Section 3 -->
+        <%- include ('section3') %>
+
+        <!-- Include Section 4 -->
+        <%- include ('section4') %>
+
+        <!-- Include Section 5 -->
+        <%- include ('section5') %>
+    </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileMenuButton =
+                document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener("click", () => {
+                    const isExpanded =
+                        mobileMenuButton.getAttribute("aria-expanded") ===
+                        "true";
+                    mobileMenu.classList.toggle("hidden");
+                    mobileMenuButton.setAttribute("aria-expanded", !isExpanded);
+                });
+
+                document.addEventListener("click", (event) => {
+                    const isClickInsideNav = event.target.closest("nav");
+                    if (
+                        !isClickInsideNav &&
+                        !mobileMenu.classList.contains("hidden")
+                    ) {
+                        mobileMenu.classList.add("hidden");
+                        mobileMenuButton.setAttribute("aria-expanded", "false");
+                    }
+                });
+            }
+
+            // FORM VALIDATION
+            const contactForm = document.getElementById("contact-form");
+            if (contactForm) {
+                const nameInput = document.getElementById("name");
+                const emailInput = document.getElementById("email");
+                const messageInput = document.getElementById("message");
+
+                nameInput?.addEventListener("input", () => {
+                    document
+                        .getElementById("name-error")
+                        ?.classList.add("hidden");
+                    nameInput.classList.remove("border-red-500");
+                });
+
+                emailInput?.addEventListener("input", () => {
+                    document
+                        .getElementById("email-error")
+                        ?.classList.add("hidden");
+                    emailInput.classList.remove("border-red-500");
+                });
+
+                messageInput?.addEventListener("input", () => {
+                    document
+                        .getElementById("message-error")
+                        ?.classList.add("hidden");
+                    messageInput.classList.remove("border-red-500");
+                });
+            }
+        });
+    </script>
+</html>

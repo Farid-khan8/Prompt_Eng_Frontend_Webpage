@@ -1,0 +1,156 @@
+<footer class="bg-white border-t border-gray-200 mt-16">
+    <div
+        class="max-w-7xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-4 gap-10"
+    >
+        <!-- Brand / About -->
+        <div>
+            <h3 class="text-xl font-semibold text-blue-600">MyCompany</h3>
+            <p class="mt-4 text-gray-600 leading-relaxed">
+                Delivering modern, scalable web solutions with a strong focus on
+                performance, usability, and elegant UI. We design with purpose
+                and build with precision.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">
+                Quick Links
+            </h4>
+            <ul class="space-y-3">
+                <li>
+                    <a
+                        href="#home"
+                        class="text-gray-600 hover:text-blue-600 transition"
+                        >Home</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#about"
+                        class="text-gray-600 hover:text-blue-600 transition"
+                        >About</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#services"
+                        class="text-gray-600 hover:text-blue-600 transition"
+                        >Services</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="#contact"
+                        class="text-gray-600 hover:text-blue-600 transition"
+                        >Contact</a
+                    >
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">Contact</h4>
+            <ul class="space-y-3 text-gray-600">
+                <li>
+                    Email:
+                    <span class="text-gray-800">support@mycompany.com</span>
+                </li>
+                <li>
+                    Phone: <span class="text-gray-800">+91 98765 43210</span>
+                </li>
+                <li>
+                    Location: <span class="text-gray-800">Mumbai, India</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div>
+            <h4 class="text-lg font-semibold text-gray-900 mb-4">Follow Us</h4>
+            <div class="flex space-x-5">
+                <!-- Facebook -->
+                <a
+                    href="#"
+                    class="text-gray-600 hover:text-blue-600 transition"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-7 h-7"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M18 2h-3a3 3 0 00-3 3v3H9v4h3v8h4v-8h3l1-4h-4V5a1 1 0 011-1h3z"
+                        />
+                    </svg>
+                </a>
+
+                <!-- Twitter -->
+                <a
+                    href="#"
+                    class="text-gray-600 hover:text-blue-600 transition"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-7 h-7"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M8 19c11 0 14-9 14-14v-.7A10 10 0 0024 2a9.8 9.8 0 01-2.8.8A4.8 4.8 0 0023.3.4a9.9 9.9 0 01-3 1.2A4.9 4.9 0 0016.6 0c-2.7 0-4.8 2.3-4.3 5A14 14 0 011.7.9a4.7 4.7 0 001.5 6.3A5 5 0 01.8 6v.1c0 2.3 1.7 4.3 4 4.8a4.9 4.9 0 01-2.2.1 4.9 4.9 0 004.5 3.4A9.9 9.9 0 010 17.5 14 14 0 008 19"
+                        />
+                    </svg>
+                </a>
+
+                <!-- Instagram -->
+                <a
+                    href="#"
+                    class="text-gray-600 hover:text-blue-600 transition"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-7 h-7"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5z"
+                        />
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M12 8a4 4 0 100 8 4 4 0 000-8z"
+                        />
+                        <circle cx="17" cy="7" r="1" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-200 mt-10 py-4">
+        <p class="text-center text-gray-600 text-sm">
+            © <span id="year"></span> MyCompany. All rights reserved.
+        </p>
+    </div>
+
+    <script>
+        // Auto-update year
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</footer>
